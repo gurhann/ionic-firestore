@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {AngularFireModule} from 'angularfire2';
 import {firebaseConfigs} from './credentials';
 import {AngularFireStorageModule} from 'angularfire2/storage';
+import {AngularFirestore} from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
   providers: [
     StatusBar,
     SplashScreen,
+      AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
